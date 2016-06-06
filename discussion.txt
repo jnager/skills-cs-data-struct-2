@@ -20,3 +20,117 @@ How is a Graph different from a Tree?
 
 Give an example of somthing that would be good to model with a Graph.
 >> Possible moves of a board game.
+
+
+Performance of Different Data Structures
+
+Data Structure      Index       Search      Add-R       Add-L       Pop-L       Pop-R
+Python List(Array)  O(1)        O(n)        O(1)
+Linked List
+    >> Index - O(n)
+    >> Search - O(n)
+    >> Add-R - O(1) *Assumes tracking of tail
+    >> Add-L - O(1)
+    >> Pop-L - O(1)
+    >> Pop-R - O(1)
+
+Doubly-Linked List
+    >> Index - O(n)
+    >> Search - O(n)
+    >> Add-R - O(1)
+    >> Add-L - O(1)
+    >> Pop-L - O(1)
+    >> Pop-R - O(1)
+
+Queue (as Array)
+    >> Index - X
+    >> Search - X
+    >> Add-R - O(1)
+    >> Add-L - X
+    >> Pop-L - O(n)
+    >> Pop-R - X
+
+
+Queue (as LL or DLL)
+    >> Index - X
+    >> Search - X
+    >> Add-R - O(1)
+    >> Add-L - X
+    >> Pop-L - O(1)
+    >> Pop-R - X
+
+Stack (as Array, LL, or DLL)
+    >> Index - X
+    >> Search - X
+    >> Add-R - O(1)
+    >> Add-L - X
+    >> Pop-L - X
+    >> Pop-R - O(1)
+
+Deque (as DLL)
+    >> Index - X
+    >> Search - X
+    >> Add-R - O(1)
+    >> Add-L - O(1)
+    >> Pop-L - O(1)
+    >> Pop-R - O(1)
+
+Index: Find an item in the structure when you know its position
+Search: Find an item in the structure when you know its data
+Add(R/L): Set a key in set/dictionary or add node to tree
+Pop(R/L): Remove a key or node
+
+
+Fill in Runtime and Memory:
+
+The answers for Dictionary have been provided; you should fill in the rest:
+
+Data Structure  Get Add Delete  Iterate Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)    medium
+Set (Hash Map)
+    >> Get - O(1)
+    >> Add - O(1)
+    >> Delete - O(1)
+    >> Iterate - O(n)
+    >> Memory - medium
+
+Binary Search Tree
+    >> Get - O(n log n)
+    >> Add - O(n) *Could trigger rebalance
+    >> Delete - O(n)
+    >> Iterate - O(1) ** Meg - I'm not totally sure on this one. Why would iterating be O(1)
+    >> Memory - small
+
+Tree
+    >> Get - O(n)
+    >> Add - O(1)
+    >> Delete - O(1)
+    >> Iterate - O(1)
+    >> Memory - small
+
+Get: Find an item in the structure
+Add: Set a key in set/dictionary or add node to tree
+Delete: Remove a key or node
+Iterate: Find next item in data structure
+Memory: Relative to data, how much memory is used? (Choices: a little, medium, or a lot)
+
+
+Sorting
+
+Describe in words how the Bubble Sort algorithm works.
+>> Bubble sort starts on the first item in a list and then moves two by two through the list. In each comparison of two elements, bubble sort swaps (if necessary) the lower number to the left and the higher number to the right. By following this process, the highest numbers "bubble" to the end (right side) of the list. Bubble sort is often a O(n2) operation, though it can sometimes be a O(n) operation on nearly sorted lists.
+
+Describe in words how the Merge Sort algorithm works.
+>> In merge sort, a list is taken and recursively broken down into "lists" with single items. Those single items lists are then built back up into two ordered lists which can then be merged back together. Merge sort is always O(n log n).
+
+Describe in words how the Quick Sort algorithm works.
+>> Quick sort picks a random "pivot" item in the list. Ideally the pivot would be roughly the median of the list. Then it moves through the list and moves items to the left or right of the pivot depending on whether they are greater than or less than. Once the pivot is appropriately positioned such that all numbers larger than the pivot are to the right and all numbers smaller than the pivot are the to the left, then a new pivot is chosen and the process repeats. Quick sort is usually O(n log n) but it can be worse or better depending on the profile of the list.
+
+
+Git Branching
+
+Give an instance when you would use git branching.
+>> If I was working with a team on a product and I wanted to build a POC that may or may not be used later, I could create a branch to work on without adding potentially unnecessary code to the master branch.
+
+What is a pull request?
+>> A pull request (as submitted through GitHub) asks the Product Owner/Scrum Master/Project Manager/etc. to merge my code changes into the master branch of the project.

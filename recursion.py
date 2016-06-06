@@ -83,13 +83,14 @@ def num_nodes(tree):
         >>> three = Node(3)
         >>> one.add_child(two)
         >>> one.add_child(three)
+        >>> two.add_child(Node(4))
+        >>> two.add_child(Node(5))
         >>> num_nodes(one)
-        3
+        5
     """
-    node_count = 0
+    node_count = 1
 
     if not tree.children:
-        node_count = 1
         return node_count
 
     for child in tree.children:
