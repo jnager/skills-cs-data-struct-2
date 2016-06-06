@@ -8,7 +8,7 @@ def bubble_sort(lst):
     """
     # Move through the list the same number of times as there are items less one
     for count in range(len(lst) - 1):
-    swap_occurred = False
+        swap_occurred = False
         # Move through each item in list, but stop before the final item and the
         # final "count" number of items because those will already be sorted.
         for index in range(len(lst) - 1 - count):
