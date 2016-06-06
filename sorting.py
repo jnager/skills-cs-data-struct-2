@@ -18,6 +18,7 @@ def bubble_sort(lst):
         if not swap_occurred:
             # If nothing swapped, list is already sorted
             break
+    return lst
 
 
 
@@ -28,12 +29,12 @@ def merge_lists(list1, list2):
     [1, 3, 4, 7, 9, 11]
     """
     sorted_list = []
-    while list1 or list2:
-        if not list1:
-            sorted_list.extend(list2)
-        if not list2:
-            sorted_list.extend(list1)
-        if list1[0] < list2[0]:
+    while len(list1) > 0 or len(list2) > 0:
+        if len(list1) == 0:
+            sorted_list.append(list2.pop(0))
+        elif len(list2) == 0:
+            sorted_list.append(list1.pop(0))
+        elif list1[0] < list2[0]:
             sorted_list.append(list1.pop(0))
         else:
             sorted_list.append(list2.pop(0))
@@ -50,10 +51,21 @@ def merge_sort(lst):
     function you already wrote to return a new sorted list containing all integers from
     thin input list. In other words, the new function should sort a list using merge_lists
     and recursion.
-    >>> merge_sort([6, 2, 3, 9, 0, 1])
-    [0, 1, 2, 3, 6, 9]
+    >>> merge_sort([6, 2, 3, 11, 15, 9, 0, 1])
+    [0, 1, 2, 3, 6, 9, 11, 15]
     """
-    pass
+    # Base case
+    if len(lst) < 2:
+        return lst
+
+    mid_point = int(len(lst))/2
+    half_1 = merge_sort(lst[:mid_point])
+    half_2 = merge_sort(lst[mid_point:])
+
+    # will only get here once the "lists" are single items
+    merged_list = merge_lists(half_1, half_2)
+
+    return merged_list
 
 
 
