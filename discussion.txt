@@ -1,0 +1,22 @@
+Discussion Questions
+
+Recursion
+
+In your own words, what is Recursion?
+>> Recursion is when a function calls itself. It is a useful programming technique for performing a set of operations repeatedly until some condition is fulfilled.
+
+Why is it necessary to have a Base Case?
+>> A base case determines when the recursion will stop. With out a base case, calling a recursive function would simply create an infinite loop (or some other error).
+
+
+
+Graphs
+
+What is a Graph?
+>> A graph is a connected set of data. It consists of vertexes or nodes, which are connected to each other by edges. Graphs can be cyclical and directional.
+
+How is a Graph different from a Tree?
+>> A graph can be cyclical.
+
+Give an example of somthing that would be good to model with a Graph.
+>> Possible moves of a board game.
