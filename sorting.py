@@ -51,8 +51,8 @@ def merge_sort(lst):
     function you already wrote to return a new sorted list containing all integers from
     thin input list. In other words, the new function should sort a list using merge_lists
     and recursion.
-    >>> merge_sort([6, 2, 3, 11, 15, 9, 0, 1])
-    [0, 1, 2, 3, 6, 9, 11, 15]
+    >>> merge_sort([6, 2, 3, 9, 0, 1])
+    [0, 1, 2, 3, 6, 9]
     """
     # Base case
     if len(lst) < 2:
